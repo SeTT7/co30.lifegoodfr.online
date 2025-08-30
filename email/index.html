@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscreva-se - Curso de Paisagismo Digital</title>
+    <title>Inscríbete - Curso de Paisajismo Digital</title>
     <style>
         * {
             margin: 0;
@@ -159,18 +159,19 @@
     </style>
 </head>
 <body>
-        <h1>Se inscreva colocando seu email no espaço abaixo</h1>
+    <div class="container">
+        <h1>Inscríbete ingresando tu email en el espacio abajo</h1>
         
         <div class="form-container">
             <div class="input-group">
                 <label for="email"></label>
-                <input type="email" id="email" class="email-input" placeholder="Seu melhor email">
+                <input type="email" id="email" class="email-input" placeholder="Tu mejor email">
             </div>
             <button class="btn" id="submit-btn">Enviar</button>
         </div>
         
         <div class="success-message" id="success-message">
-            <p>Pronto, agora só verificar seu email!</p>
+            <p>¡Listo, ahora solo verifica tu email!</p>
         </div>
     </div>
 
@@ -183,16 +184,16 @@
             submitBtn.addEventListener('click', function() {
                 if (emailInput.value === '' || !emailInput.value.includes('@')) {
                     emailInput.style.border = '2px solid #ff4081';
-                    emailInput.placeholder = 'Por favor, insira um email válido';
+                    emailInput.placeholder = 'Por favor, ingresa un email válido';
                     return;
                 }
                 
-                // Esconder o formulário e mostrar mensagem de sucesso
+                // Ocultar el formulario y mostrar mensaje de éxito
                 document.querySelector('.form-container').style.display = 'none';
                 successMessage.style.display = 'block';
             });
             
-            // Remover o destaque de erro quando o usuário começar a digitar
+            // Quitar el resaltado de error cuando el usuario comience a escribir
             emailInput.addEventListener('input', function() {
                 emailInput.style.border = 'none';
             });
